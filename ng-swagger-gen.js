@@ -1173,6 +1173,8 @@ function processServices(swagger, models, options) {
         parameters = parameters.concat(methodParameters);
       }
 
+      parameters = parameters.filter(p => p.in !== 'header')
+
       var paramsClass = null;
       var paramsClassComments = null;
       if (parameters.length >= minParamsForContainer) {
