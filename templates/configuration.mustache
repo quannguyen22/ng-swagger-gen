@@ -1,5 +1,6 @@
 /* tslint:disable */
 import { Injectable } from '@angular/core';
+import { Path } from 'src/app/_helpers/path';
 
 /**
  * Global configuration for {{prefix}} services
@@ -9,6 +10,9 @@ import { Injectable } from '@angular/core';
 })
 export class {{configurationClass}} {
   rootUrl: string = '{{{rootUrl}}}';
+  constructor(private path: Path) {
+    this.rootUrl = path.backendUrl
+  }
 }
 
 export interface {{configurationInterface}} {
