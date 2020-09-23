@@ -11,7 +11,7 @@ import { Path } from 'src/app/_helpers/path';
 export class {{configurationClass}} {
   rootUrl: string = '{{{rootUrl}}}';
   constructor(private path: Path) {
-    this.rootUrl = path.backendUrl
+    this.rootUrl = this.path.backendUrl
   }
 }
 
